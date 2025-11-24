@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+body {
+  background: #f7f7f7;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: transparent;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* error 컬러 #FF8080 */
+.emph_color {
+  color: #ff8080;
+}
+
+/* 승인,강조 컬러 #3377FF */
+.emph_color2 {
+  color: #37f;
+}
+
+/* 취소 컬러 #B3B3B3 */
+.emph_color3 {
+  color: #b3b3b3;
+}
+
+/* global */
+#MongmungIndex {
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+/* 스킵네비게이션 */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /* PC용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.ir_caption {
+  overflow: hidden;
+  width: 1px;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+} /* Table caption에 숨김텍스트를 제공할때 */
+.screen_out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.ico_loader {
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ffdd57;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 선택상자 */
+.opt_custom {
+  display: inline-block;
+  position: relative;
+  width: 175px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+.opt_custom .link_selected {
+  display: block;
+  position: relative;
+  padding: 0 27px 0 12px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.opt_custom .link_selected::after {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #3d3d3d;
+  border-right: 5px solid transparent;
+  border-bottom: none;
+  border-left: 5px solid transparent;
+  content: "";
+}
+
+.opt_custom .layer_opt {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  padding: 0 10px 0 11px;
+}
+
+.opt_custom .list_opt {
+  padding: 9px 0 11px;
+  border-top: 1px solid #dedede;
+}
+
+.opt_custom .list_opt li {
+  height: 32px;
+  padding: 0 5px;
+  line-height: 32px;
+}
+
+.opt_custom .link_opt {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.opt_custom.on .layer_opt {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  border: 1px solid #dedede;
+  border-top: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.opt_custom.on .link_selected {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.opt_custom.on .link_selected::after {
+  border-top: none;
+  border-bottom: 6px solid #3d3d3d;
+}
+
+.tf_custom {
+  height: 150px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
+
+.link_sample {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #2f6feb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link_sample:disabled {
+  color: #aaa;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+.btn_type1 {
+  min-width: 60px;
+  height: 30px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #272522;
+  background-color: #ffef3f;
+  text-align: center;
+}
+
+.btn_type2 {
+  min-width: 60px;
+  height: 30px;
+  padding: 0 15px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #272522;
+  background-color: #fff;
+  text-align: center;
+}
+
+.btn_type1:disabled,
+.btn_type2:disabled {
+  color: #7f7f7f;
+  background-color: #e8e8e8;
+}
+
+.opt_custom + .btn_type1,
+.opt_custom + .btn_type2 {
+  margin-left: 10px;
+}
+
+.btn_type1 + .btn_type2 {
+  margin-left: 10px;
+}
+
+.btn_type2 + .btn_type2 {
+  margin-left: 10px;
+}
+
+.wrap_menu--with-settings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.wrap_menu--with-settings .btn_settings_trigger {
+  margin-left: 10px;
+}
+
+.wrap_menu--with-settings .btn_type2.btn_settings_trigger + .btn_type2 {
+  margin-left: 10px;
+}
+
+.wrap_menu--with-settings .link_sample {
+  margin-left: auto;
+}
+
+.wrap_btn {
+  margin-top: 15px;
+}
+
+.lint_type1 {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-width: 1024px;
+  background-color: #f7f7f7;
+}
+
+.k_head {
+  position: relative;
+  z-index: 0;
+  min-width: 1024px;
+  padding: 15px 20px;
+  background-color: #242424;
+}
+
+.k_head .tit_cont {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+}
+
+.k_head .emph_desc {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1;
+  color: #bbb;
+}
+
+.k_main {
+  position: relative;
+  min-width: 1024px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.box_article {
+  position: relative;
+  padding: 15px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 2px 4px 0 rgb(212 212 212 / 50%);
+  background-color: #fff;
+}
+
+.box_article .tit_paragraph {
+  display: inline-block;
+  margin: 25px 0 15px;
+  padding: 0 10px 2px 0;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000;
+  vertical-align: bottom;
+}
+
+.box_article .box_diff {
+  height: 400px;
+  margin-top: 20px;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+}
+
+.box_article .wrap_menu {
+  margin: 15px 0;
+}
+
+.box_article .noti_info {
+  padding: 10px 45px 12px 20px;
+  border: 1px solid #d7e7e7;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #f1f7f7;
+}
+
+.box_error {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.box_error .txt_message {
+  display: block;
+  margin-top: 9px;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.section_result {
+  margin-top: 35px;
+  border-top: 3px dotted #ddd;
+}
+
+.section_result .tf_custom {
+  margin-top: 12px;
+}
+
+.box_rules {
+  overflow-y: auto;
+  height: 300px;
+  margin-top: 10px;
+  border: 1px solid #e7e7e7;
+  font-size: 11px;
+}
+
+.nav_flow {
+  display: block;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 10;
+}
+
+.nav_flow .btn_type2 {
+  display: block;
+  width: 40px;
+  min-width: 40px;
+  padding: 0;
+  font-size: 11px;
+}
+
+.nav_flow .btn_type2 + .btn_type2 {
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+.settings_drawer_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 19;
+}
+
+.settings_drawer_overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.settings_drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  height: 100vh;
+  padding: 18px 18px 32px;
+  background: #fff;
+  border-left: 1px solid #e7e7e7;
+  box-shadow: -4px 0 12px 0 rgba(0, 0, 0, 0.08);
+  transition: right 0.25s ease, opacity 0.2s ease;
+  opacity: 0;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.settings_drawer.open {
+  right: 0;
+  opacity: 1;
+}
+
+.settings_drawer_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.settings_drawer_kicker {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+
+.settings_drawer_title {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.settings_tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.settings_tab_button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings_tab_button.active {
+  color: #1976d2;
+  border-bottom-color: #1976d2;
+}
+
+.settings_drawer_body {
+  padding-bottom: 24px;
+}
+
+.k_foot {
+  position: relative;
+  min-width: 1024px;
+  padding: 0 0 30px;
+  text-align: center;
+}
+
+.info_copy {
+  font-size: 12px;
+  color: #888;
+}
+
+.link_copy {
+  color: #555;
+}
+
+/* 기본 라디오 버튼을 숨김 */
+input[type="radio"] {
+  display: none;
+}
+
+/* 라디오 버튼과 텍스트를 함께 포함하는 라벨 스타일 */
+label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+label + label {
+  margin-left: 12px;
+}
+
+/* 커스텀 라디오 버튼 스타일 */
+label .custom-radio {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px; /* 라벨 텍스트와 라디오 버튼 간의 간격 */
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+/* 선택된 상태의 커스텀 라디오 버튼 스타일 */
+input[type="radio"]:checked + .custom-radio {
+  border-color: #ffdd57;
+  background-color: #ffdd57; /* 원하는 색상 코드 */
+}
+
+/* 라디오 버튼의 내부 점 */
+.custom-radio::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: "";
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* 선택된 상태에서의 점 표시 */
+input[type="radio"]:checked + .custom-radio::after {
+  opacity: 1;
+}
+
+.k_head .badge_head {
+  display: inline-block;
+  margin: 2px 0 0 4px;
+  padding: 2px 3px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #333;
+  background-color: #ffef3f;
+  vertical-align: top;
+}

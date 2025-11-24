@@ -1,0 +1,100 @@
+.container {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.description {
+  padding: 12px 24px;
+  font-size: 13px;
+  color: #666;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section {
+  padding: 20px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sectionTitle {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sectionDescription {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primaryButton {
+  color: #fff;
+  background-color: #1976d2;
+}
+
+.primaryButton:hover {
+  background-color: #1565c0;
+}
+
+.secondaryButton {
+  color: #1976d2;
+  background-color: #fff;
+  border: 1px solid #1976d2;
+}
+
+.secondaryButton:hover {
+  color: #fff;
+  background-color: #1976d2;
+}
+
+.exampleSection {
+  padding: 20px 24px;
+  background-color: #f9f9f9;
+}
+
+.codeBlock {
+  margin: 12px 0 0;
+  padding: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow-x: auto;
+}
