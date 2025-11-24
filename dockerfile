@@ -1,16 +1,18 @@
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # 종속성 먼저 설치 (캐싱 활용)
-COPY package.json package-lock.json ./
-RUN npm ci --no-audit --no-fund
+RUN corepack enable
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # 소스 복사
 COPY . .
 
 # 메모리 제한 설정을 명시적으로 추가
 ENV NODE_OPTIONS="--max-old-space-size=512"
-#RUN npm run build
+# 빌드
+RUN pnpm run build
 
 FROM nginx:stable-alpine AS production
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
