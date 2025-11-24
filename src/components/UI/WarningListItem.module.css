@@ -1,0 +1,51 @@
+.item {
+  align-items: baseline;
+  display: flex;
+  line-height: 20px;
+}
+
+.location {
+  min-width: 60px;
+  margin: 0 8px 0 8px;
+  font-size: 12px;
+  color: #888;
+  flex: none;
+}
+
+.severity {
+  min-width: 48px;
+  margin: 0 8px 0 0;
+  padding: 0 4px;
+  border-radius: 2px;
+  font-size: 10px;
+  color: white;
+  background-color: grey;
+  flex: none;
+  text-align: center;
+}
+
+.item.error .severity {
+  background-color: crimson;
+}
+
+.item.warning .severity {
+  background-color: gold;
+}
+
+.message {
+  margin: 0;
+  font-size: 12px;
+}
+
+.rule {
+  color: darkgray;
+}
+
+.ruleLink {
+  color: #888;
+  text-decoration: underline;
+}
+
+.ruleLink:hover {
+  text-decoration: none;
+}

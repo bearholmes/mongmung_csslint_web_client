@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* JSX */
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+
+    /* Bundler Mode */
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Path Mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@types/*": ["./src/types/*"],
+      "@schemas/*": ["./src/schemas/*"],
+      "@atoms/*": ["./src/atoms/*"],
+      "@styles/*": ["./src/styles/*"],
+      "vite": ["./node_modules/vite"]
+    },
+
+    /* Types */
+    "types": ["vite/client", "@testing-library/jest-dom", "vitest/globals"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "build", "storybook-static"]
+}
