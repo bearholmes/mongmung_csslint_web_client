@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+dist
+storybook-static
+.vite
+.pnpm-store
+.DS_Store
+npm-debug.log
+yarn.lock
+package-lock.json
+*.tsbuildinfo

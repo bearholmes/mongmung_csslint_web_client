@@ -2,15 +2,15 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # 종속성 먼저 설치 (캐싱 활용)
-RUN corepack enable
+RUN corepack enable && corepack prepare pnpm@9 --activate
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+ENV NODE_OPTIONS="--max-old-space-size=1024"
+RUN pnpm install --frozen-lockfile --reporter=append-only --child-concurrency=2 --network-timeout=600000 --registry=https://registry.npmjs.org
 
 # 소스 복사
 COPY . .
 
 # 메모리 제한 설정을 명시적으로 추가
-ENV NODE_OPTIONS="--max-old-space-size=512"
 # 빌드
 RUN pnpm run build
 
