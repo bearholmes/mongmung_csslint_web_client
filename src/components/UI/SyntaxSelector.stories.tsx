@@ -26,6 +26,7 @@ export const Default: Story = {
   render: (args) => {
     const [currentValue, setCurrentValue] = useState(args.value);
     const selected = SYNTAX_OPTIONS.find((opt) => opt.value === currentValue) ?? SYNTAX_OPTIONS[0];
+    const selectedLabel = selected?.label ?? args.label;
 
     const handleSelect = (option: SyntaxOption) => {
       setCurrentValue(option.value);
@@ -37,7 +38,7 @@ export const Default: Story = {
         <SyntaxSelector
           {...args}
           value={currentValue}
-          label={selected.label}
+          label={selectedLabel}
           options={SYNTAX_OPTIONS}
           onSelectOption={handleSelect}
         />
