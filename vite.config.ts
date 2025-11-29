@@ -40,14 +40,7 @@ export default defineConfig({
           if (id.includes('monaco-editor')) {
             return 'monaco-editor';
           }
-          // React 관련 패키지
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'react-vendor';
-          }
-          // 기타 node_modules
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
+          // 나머지는 기본 청크 분할 규칙을 사용해 순환 의존성 분리 문제를 피한다.
         },
       },
     },
