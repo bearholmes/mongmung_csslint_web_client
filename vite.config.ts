@@ -22,7 +22,7 @@ export default defineConfig({
     port: 5001,
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:5002',
+        target: 'http://192.168.45.105:5002',
         // target: 'https://csslint.mongmung.ium.kr',
         changeOrigin: true,
       },

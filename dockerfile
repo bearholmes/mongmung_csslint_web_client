@@ -1,6 +1,10 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# API URL build argument allows injecting environment-specific backend endpoint.
+ARG VITE_API_URL
+ENV VITE_API_URL=${VITE_API_URL:-/api}
+
 # 종속성 먼저 설치 (캐싱 활용)
 RUN corepack enable && corepack prepare pnpm@9 --activate
 COPY package.json pnpm-lock.yaml ./
