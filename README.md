@@ -1,4 +1,4 @@
-# 🎨 몽멍 CSS Lint 프론트엔드
+# 🎨 Mongmung CSS Lint Web Client
 
 > React 19와 TypeScript로 구축된 현대적이고 기능이 풍부한 CSS 린팅 웹 애플리케이션
 
@@ -66,17 +66,13 @@
 ## 📦 설치
 
 ### 필수 요구사항
-- Node.js 18+ 또는 20+
-- npm 9+ 또는 Bun
+- Node.js 20+
+- pnpm 9+
 
 ### 의존성 설치
 
 ```bash
-# npm 사용
-npm install
-
-# 또는 Bun 사용
-bun install
+pnpm install
 ```
 
 ## 🚀 빠른 시작
@@ -248,7 +244,7 @@ npm run test:coverage
 
 이 프론트엔드는 백엔드 API 서버가 실행 중이어야 합니다.
 
-**백엔드 저장소**: [mongmung_csslint_be](https://github.com/bearholmes/mongmung_csslint_be)
+**백엔드 저장소**: [mongmung_csslint_server](https://github.com/bearholmes/mongmung_csslint_server)
 
 **기본 API URL**: `http://localhost:5002`
 
@@ -309,8 +305,8 @@ export default defineConfig({
 
 ## 🔗 관련 프로젝트
 
-- **백엔드**: [mongmung_csslint_be](https://github.com/bearholmes/mongmung_csslint_be) - Bun 및 Elysia 백엔드 API
+- **백엔드**: [mongmung_csslint_server](https://github.com/bearholmes/mongmung_csslint_server) - Elysia 백엔드 API
 
 ---
 
-**몽멍 팀이 ❤️를 담아 만들었습니다**
+**Mongmung 팀이 ❤️를 담아 만들었습니다**
