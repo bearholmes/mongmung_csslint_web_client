@@ -226,7 +226,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/color-hex-case',
+    key: '@stylistic/color-hex-case',
     label: 'HEX 색상 대소문자',
     description: 'HEX 색상 코드의 대소문자 규칙',
     category: 'color',
@@ -237,7 +237,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/color-hex-length',
+    key: 'color-hex-length',
     label: 'HEX 색상 길이',
     description: 'HEX 색상 코드의 길이 (3자리/6자리)',
     category: 'color',
@@ -297,7 +297,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
 
   // ============ 간격 규칙 ============
   {
-    key: 'stylistic/indentation',
+    key: '@stylistic/indentation',
     label: '들여쓰기',
     description: '들여쓰기 스타일을 지정합니다',
     category: 'spacing',
@@ -309,7 +309,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/max-empty-lines',
+    key: '@stylistic/max-empty-lines',
     label: '최대 빈 줄',
     description: '허용되는 연속 빈 줄의 최대 개수',
     category: 'spacing',
@@ -321,7 +321,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/no-eol-whitespace',
+    key: '@stylistic/no-eol-whitespace',
     label: '줄 끝 공백 금지',
     description: '줄 끝의 불필요한 공백을 제거합니다',
     category: 'spacing',
@@ -332,7 +332,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/no-missing-end-of-source-newline',
+    key: '@stylistic/no-missing-end-of-source-newline',
     label: '파일 끝 줄바꿈 필수',
     description: '파일 끝에 빈 줄을 요구합니다',
     category: 'spacing',
@@ -448,7 +448,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/selector-list-comma-newline-after',
+    key: '@stylistic/selector-list-comma-newline-after',
     label: '선택자 콤마 후 줄바꿈',
     description: '선택자 목록에서 콤마 후 줄바꿈 규칙',
     category: 'selectors',
@@ -698,7 +698,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
 
   // ============ 포맷팅 규칙 ============
   {
-    key: 'stylistic/string-quotes',
+    key: '@stylistic/string-quotes',
     label: '문자열 따옴표',
     description: '문자열에 사용할 따옴표 종류',
     category: 'formatting',
@@ -709,7 +709,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/declaration-block-trailing-semicolon',
+    key: '@stylistic/declaration-block-trailing-semicolon',
     label: '마지막 세미콜론',
     description: '선언 블록의 마지막 세미콜론 규칙',
     category: 'formatting',
@@ -720,7 +720,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/no-extra-semicolons',
+    key: '@stylistic/no-extra-semicolons',
     label: '불필요한 세미콜론 제거',
     description: '불필요한 세미콜론을 제거합니다',
     category: 'formatting',
@@ -731,7 +731,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/block-opening-brace-space-before',
+    key: '@stylistic/block-opening-brace-space-before',
     label: '중괄호 앞 공백',
     description: '여는 중괄호 앞에 공백 사용 규칙',
     category: 'formatting',
@@ -742,7 +742,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/block-closing-brace-newline-after',
+    key: '@stylistic/block-closing-brace-newline-after',
     label: '닫는 중괄호 후 줄바꿈',
     description: '닫는 중괄호 후 줄바꿈 규칙',
     category: 'formatting',
@@ -753,7 +753,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/declaration-colon-space-after',
+    key: '@stylistic/declaration-colon-space-after',
     label: '콜론 후 공백',
     description: '속성 콜론 후 공백 사용 규칙',
     category: 'formatting',
@@ -764,7 +764,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/declaration-colon-space-before',
+    key: '@stylistic/declaration-colon-space-before',
     label: '콜론 앞 공백',
     description: '속성 콜론 앞 공백 사용 규칙',
     category: 'formatting',
@@ -775,7 +775,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/function-comma-space-after',
+    key: '@stylistic/function-comma-space-after',
     label: '함수 콤마 후 공백',
     description: '함수 인자 콤마 후 공백 규칙',
     category: 'formatting',
@@ -786,7 +786,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/number-leading-zero',
+    key: '@stylistic/number-leading-zero',
     label: '소수 앞 0',
     description: '1 미만 소수에 앞의 0 표기 규칙',
     category: 'formatting',
@@ -797,7 +797,7 @@ export const EDITABLE_RULES: readonly RuleMetadata[] = [
     ],
   },
   {
-    key: 'stylistic/number-no-trailing-zeros',
+    key: '@stylistic/number-no-trailing-zeros',
     label: '소수 뒤 0 제거',
     description: '소수 끝의 불필요한 0을 제거합니다',
     category: 'formatting',
