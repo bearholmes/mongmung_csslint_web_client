@@ -8,5 +8,4 @@ storybook-static
 .DS_Store
 npm-debug.log
 yarn.lock
-package-lock.json
 *.tsbuildinfo
