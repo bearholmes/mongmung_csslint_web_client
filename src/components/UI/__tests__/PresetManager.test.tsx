@@ -2,9 +2,9 @@
  * PresetManager 컴포넌트 단위 테스트
  */
 
+import { renderWithProviders } from '@/test/test-utils';
 import { fireEvent, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { renderWithProviders } from '@/test/test-utils';
 import { PresetManager } from '../PresetManager';
 
 describe('PresetManager', () => {

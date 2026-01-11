@@ -3,7 +3,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { ApiError, getErrorMessage, isErrorType, NetworkError, ValidationError } from '../error';
+import { ApiError, NetworkError, ValidationError, getErrorMessage, isErrorType } from '../error';
 
 describe('Error Classes', () => {
   it('should create NetworkError with default message', () => {

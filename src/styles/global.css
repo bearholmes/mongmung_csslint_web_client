@@ -3,8 +3,7 @@
   font-family: "KoddiUDOnGothic";
   font-style: normal;
   font-weight: 700;
-  src:
-    url(../assets/fonts/KoddiUDOnGothic-ExtraBold.woff2) format("woff2"),
+  src: url(../assets/fonts/KoddiUDOnGothic-ExtraBold.woff2) format("woff2"),
     url(../assets/fonts/KoddiUDOnGothic-ExtraBold.woff) format("woff"),
     url(../assets/fonts/KoddiUDOnGothic-ExtraBold.otf) format("opentype");
 }
@@ -13,8 +12,7 @@
   font-family: "KoddiUDOnGothic";
   font-style: normal;
   font-weight: 500;
-  src:
-    url(../assets/fonts/KoddiUDOnGothic-Bold.woff2) format("woff2"),
+  src: url(../assets/fonts/KoddiUDOnGothic-Bold.woff2) format("woff2"),
     url(../assets/fonts/KoddiUDOnGothic-Bold.woff) format("woff"),
     url(../assets/fonts/KoddiUDOnGothic-Bold.otf) format("opentype");
 }
@@ -23,8 +21,7 @@
   font-family: "KoddiUDOnGothic";
   font-style: normal;
   font-weight: 400;
-  src:
-    url(../assets/fonts/KoddiUDOnGothic-Regular.woff2) format("woff2"),
+  src: url(../assets/fonts/KoddiUDOnGothic-Regular.woff2) format("woff2"),
     url(../assets/fonts/KoddiUDOnGothic-Regular.woff) format("woff"),
     url(../assets/fonts/KoddiUDOnGothic-Regular.otf) format("opentype");
 }

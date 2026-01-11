@@ -2,8 +2,8 @@
  * Monaco Diff 에디터 컴포넌트
  */
 
-import { DiffEditor } from '@monaco-editor/react';
 import type { Syntax } from '@/types';
+import { DiffEditor } from '@monaco-editor/react';
 
 /**
  * MonacoDiffEditor Props

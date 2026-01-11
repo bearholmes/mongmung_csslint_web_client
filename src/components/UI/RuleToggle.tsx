@@ -2,8 +2,8 @@
  * 규칙 토글 컴포넌트
  */
 
-import { memo } from 'react';
 import type { RuleMetadata } from '@/constants/ruleMetadata';
+import { memo } from 'react';
 import styles from './RuleToggle.module.css';
 
 export interface RuleToggleProps {

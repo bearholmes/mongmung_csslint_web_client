@@ -2,11 +2,11 @@
  * 메인 App 컴포넌트
  */
 
+import { ErrorBoundary, ErrorFallback } from '@/components/ErrorBoundary';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
 import { RouterProvider } from 'react-router-dom';
-import { ErrorBoundary, ErrorFallback } from '@/components/ErrorBoundary';
 import { router } from './router';
 
 /**

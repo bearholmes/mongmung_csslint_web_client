@@ -2,8 +2,8 @@
  * 경고 목록 아이템 컴포넌트
  */
 
-import { memo } from 'react';
 import type { Warning } from '@/types';
+import { memo } from 'react';
 import styles from './WarningListItem.module.css';
 
 /**

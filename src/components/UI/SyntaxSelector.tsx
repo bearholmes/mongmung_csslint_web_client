@@ -2,8 +2,8 @@
  * 문법 선택 드롭다운 컴포넌트
  */
 
-import { useEffect, useRef, useState } from 'react';
 import type { SyntaxOption } from '@/types';
+import { useEffect, useRef, useState } from 'react';
 import styles from './SyntaxSelector.module.css';
 
 /**
@@ -89,12 +89,14 @@ export function SyntaxSelector({ value, options, label, onSelectOption }: Syntax
       >
         {label}
       </button>
+      {/* biome-ignore lint/a11y/useSemanticElements: Custom listbox interaction for styled dropdown */}
       <div className={styles.dropdown} role="listbox" tabIndex={0}>
         <ul className={styles.list}>
           {options.map((option) => (
             <li
               key={option.value}
               className={styles.option}
+              // biome-ignore lint/a11y/useSemanticElements: Custom option interaction for styled dropdown
               // biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: List item used as option
               role="option"
               tabIndex={0}

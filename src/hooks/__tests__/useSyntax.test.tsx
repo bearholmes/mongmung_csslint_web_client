@@ -2,11 +2,11 @@
  * useSyntax 훅 테스트
  */
 
+import { SYNTAX_OPTIONS } from '@/constants';
 import { act, renderHook } from '@testing-library/react';
-import { createStore, Provider } from 'jotai';
+import { Provider, createStore } from 'jotai';
 import type { ReactNode } from 'react';
 import { describe, expect, it } from 'vitest';
-import { SYNTAX_OPTIONS } from '@/constants';
 import { useSyntax } from '../useSyntax';
 
 const createWrapper = () => {

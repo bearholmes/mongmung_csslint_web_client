@@ -2,10 +2,10 @@
  * ConfigImportExport 컴포넌트 단위 테스트
  */
 
-import { fireEvent, screen, waitFor } from '@testing-library/react';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { renderWithProviders } from '@/test/test-utils';
 import type { LintConfig } from '@/types';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { ConfigImportExport } from '../ConfigImportExport';
 
 describe('ConfigImportExport', () => {

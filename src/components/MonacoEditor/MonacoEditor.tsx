@@ -2,10 +2,10 @@
  * Monaco 코드 에디터 컴포넌트
  */
 
+import type { Syntax } from '@/types';
 import Editor, { type OnMount } from '@monaco-editor/react';
 import type { editor } from 'monaco-editor';
 import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import type { Syntax } from '@/types';
 
 /**
  * MonacoEditor Props

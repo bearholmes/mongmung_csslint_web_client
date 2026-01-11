@@ -2,8 +2,8 @@
  * 라우터 설정
  */
 
-import { createBrowserRouter } from 'react-router-dom';
 import { HomePage, NotFoundPage } from '@/pages';
+import { createBrowserRouter } from 'react-router-dom';
 
 /**
  * 라우터 인스턴스

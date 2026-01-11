@@ -3,10 +3,10 @@
  * JSON 파일로 설정 공유 기능 제공
  */
 
-import { useAtomValue, useSetAtom } from 'jotai';
-import { useRef } from 'react';
 import { lintConfigAtom } from '@/atoms/lintAtom';
 import type { LintConfig } from '@/types';
+import { useAtomValue, useSetAtom } from 'jotai';
+import { useRef } from 'react';
 import styles from './ConfigImportExport.module.css';
 
 /**

@@ -3,12 +3,12 @@
  * 80+ stylelint 규칙을 카테고리별로 관리하는 UI
  */
 
-import { useAtomValue, useSetAtom } from 'jotai';
-import { useDeferredValue, useMemo, useState } from 'react';
 import { lintConfigAtom, resetLintConfigAtom, updateRuleAtom } from '@/atoms/lintAtom';
 import { EDITABLE_RULES, RULE_CATEGORIES, type RuleCategory } from '@/constants/ruleMetadata';
-import styles from './RulesPanel.module.css';
+import { useAtomValue, useSetAtom } from 'jotai';
+import { useDeferredValue, useMemo, useState } from 'react';
 import { RuleToggle } from './RuleToggle';
+import styles from './RulesPanel.module.css';
 
 /**
  * 린트 규칙 커스터마이징 패널

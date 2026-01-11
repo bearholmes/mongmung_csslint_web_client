@@ -3,17 +3,17 @@
  * 사용자 정의 프리셋 저장/불러오기/삭제/이름변경 기능 제공
  */
 
-import { useAtomValue, useSetAtom } from 'jotai';
-import { useState } from 'react';
 import {
+  MAX_PRESETS,
   deletePresetAtom,
   loadPresetAtom,
-  MAX_PRESETS,
   presetsAtom,
   renamePresetAtom,
   savePresetAtom,
 } from '@/atoms/lintAtom';
 import type { LintPreset } from '@/types';
+import { useAtomValue, useSetAtom } from 'jotai';
+import { useState } from 'react';
 import styles from './PresetManager.module.css';
 
 /**

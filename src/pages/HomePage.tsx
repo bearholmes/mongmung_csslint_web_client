@@ -2,9 +2,6 @@
  * 메인 페이지
  */
 
-import { useAtom, useSetAtom } from 'jotai';
-import { useResetAtom } from 'jotai/utils';
-import { useCallback, useState } from 'react';
 import { inputCodeAtom, outputStyleAtom, syntaxAtom } from '@/atoms/lintAtom';
 import { Footer, Header } from '@/components/Layout';
 import { MonacoDiffEditor, MonacoEditor } from '@/components/MonacoEditor';
@@ -19,6 +16,9 @@ import {
 import { SAMPLE_CODE } from '@/constants';
 import { useLint, useSyntax, useToast } from '@/hooks';
 import { scrollToElement } from '@/utils';
+import { useAtom, useSetAtom } from 'jotai';
+import { useResetAtom } from 'jotai/utils';
+import { useCallback, useState } from 'react';
 
 type SettingsTab = 'rules' | 'presets' | 'import-export';
 
