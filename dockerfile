@@ -8,7 +8,7 @@ ENV NODE_OPTIONS="--max-old-space-size=1024"
 
 # 종속성 먼저 설치 (npm 사용)
 COPY package.json package-lock.json* ./
-RUN npm install --no-fund --no-audit --registry=https://registry.npmjs.org
+RUN npm ci --no-fund --no-audit --registry=https://registry.npmjs.org --legacy-peer-deps
 
 # 소스 복사
 COPY . .
