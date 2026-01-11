@@ -1,7 +1,7 @@
 import { SYNTAX_OPTIONS } from '@/constants';
 import type { SyntaxOption } from '@/types';
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { useState, type ComponentProps } from 'react';
 import { SyntaxSelector } from './SyntaxSelector';
 
 const meta: Meta<typeof SyntaxSelector> = {
@@ -23,7 +23,7 @@ export const Default: Story = {
     label: 'CSS',
     options: SYNTAX_OPTIONS,
   },
-  render: (args) => {
+  render: (args: ComponentProps<typeof SyntaxSelector>) => {
     const [currentValue, setCurrentValue] = useState(args.value);
     const selected = SYNTAX_OPTIONS.find((opt) => opt.value === currentValue) ?? SYNTAX_OPTIONS[0];
     const selectedLabel = selected?.label ?? args.label;
