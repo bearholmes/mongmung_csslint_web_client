@@ -1,7 +1,7 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { useState } from 'react';
 import { SYNTAX_OPTIONS } from '@/constants';
 import type { SyntaxOption } from '@/types';
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
 import { SyntaxSelector } from './SyntaxSelector';
 
 const meta: Meta<typeof SyntaxSelector> = {

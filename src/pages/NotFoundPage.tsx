@@ -2,8 +2,8 @@
  * 404 페이지
  */
 
-import { Footer } from '@/components/Layout';
 import { Link } from 'react-router-dom';
+import { Footer } from '@/components/Layout';
 import styles from './NotFoundPage.module.css';
 
 /**

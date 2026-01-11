@@ -439,7 +439,9 @@ var {
   background: #fff;
   border-left: 1px solid #e7e7e7;
   box-shadow: -4px 0 12px 0 rgba(0, 0, 0, 0.08);
-  transition: right 0.25s ease, opacity 0.2s ease;
+  transition:
+    right 0.25s ease,
+    opacity 0.2s ease;
   opacity: 0;
   overflow-y: auto;
   z-index: 20;

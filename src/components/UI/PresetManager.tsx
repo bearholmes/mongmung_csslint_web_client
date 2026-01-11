@@ -3,17 +3,17 @@
  * 사용자 정의 프리셋 저장/불러오기/삭제/이름변경 기능 제공
  */
 
+import { useAtomValue, useSetAtom } from 'jotai';
+import { useState } from 'react';
 import {
-  MAX_PRESETS,
   deletePresetAtom,
   loadPresetAtom,
+  MAX_PRESETS,
   presetsAtom,
   renamePresetAtom,
   savePresetAtom,
 } from '@/atoms/lintAtom';
 import type { LintPreset } from '@/types';
-import { useAtomValue, useSetAtom } from 'jotai';
-import { useState } from 'react';
 import styles from './PresetManager.module.css';
 
 /**
@@ -156,8 +156,7 @@ export function PresetManager() {
       {/* 프리셋 목록 */}
       <section className={styles.presetsSection} aria-labelledby="preset-list-title">
         <h4 id="preset-list-title" className={styles.sectionTitle}>
-          저장된 프리셋 ({presets.length})
-          {presets.length >= 50 && <span aria-label="프리셋 최대 개수 도달"> (최대)</span>}
+          저장된 프리셋 ({presets.length}){presets.length >= 50 && <span> (최대)</span>}
         </h4>
 
         {presets.length === 0 ? (
@@ -212,7 +211,7 @@ export function PresetManager() {
                   <>
                     <div className={styles.presetInfo}>
                       <h5 className={styles.presetName}>{preset.name}</h5>
-                      <div className={styles.presetMeta} aria-label="프리셋 정보">
+                      <div className={styles.presetMeta}>
                         <span>생성: {formatDate(preset.createdAt)}</span>
                         {preset.updatedAt !== preset.createdAt && (
                           <span>수정: {formatDate(preset.updatedAt)}</span>

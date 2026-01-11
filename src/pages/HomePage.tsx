@@ -2,6 +2,9 @@
  * 메인 페이지
  */
 
+import { useAtom, useSetAtom } from 'jotai';
+import { useResetAtom } from 'jotai/utils';
+import { useCallback, useState } from 'react';
 import { inputCodeAtom, outputStyleAtom, syntaxAtom } from '@/atoms/lintAtom';
 import { Footer, Header } from '@/components/Layout';
 import { MonacoDiffEditor, MonacoEditor } from '@/components/MonacoEditor';
@@ -16,9 +19,6 @@ import {
 import { SAMPLE_CODE } from '@/constants';
 import { useLint, useSyntax, useToast } from '@/hooks';
 import { scrollToElement } from '@/utils';
-import { useAtom, useSetAtom } from 'jotai';
-import { useResetAtom } from 'jotai/utils';
-import { useCallback, useState } from 'react';
 
 type SettingsTab = 'rules' | 'presets' | 'import-export';
 
@@ -250,9 +250,9 @@ export function HomePage() {
               )}
 
               {/* 설정 패널 (사이드바) */}
-              <div
+              <button
+                type="button"
                 className={`settings_drawer_overlay ${status.isShowRules ? 'open' : ''}`}
-                role="button"
                 tabIndex={status.isShowRules ? 0 : -1}
                 aria-label="규칙 설정 패널 닫기"
                 onClick={toggleRules}

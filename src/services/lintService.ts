@@ -43,7 +43,7 @@ export const lintService = {
     }
     const validation = LintRequestSchema.safeParse({ code, config: requestConfig, syntax });
     if (!validation.success) {
-      const firstError = validation.error.errors[0];
+      const firstError = validation.error.issues[0];
       throw new ValidationError(firstError?.message ?? '입력값이 유효하지 않습니다');
     }
     // API 요청

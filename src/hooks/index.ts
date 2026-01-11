@@ -3,5 +3,5 @@
  */
 
 export * from './useLint';
-export * from './useToast';
 export * from './useSyntax';
+export * from './useToast';

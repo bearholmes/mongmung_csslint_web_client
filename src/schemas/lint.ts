@@ -30,7 +30,7 @@ export const WarningSchema = z.object({
  */
 export const LintConfigSchema = z.object({
   outputStyle: OutputStyleSchema.optional(),
-  rules: z.record(z.unknown()),
+  rules: z.record(z.string(), z.unknown()),
 });
 
 /**
@@ -38,7 +38,7 @@ export const LintConfigSchema = z.object({
  */
 export const LintInfoSchema = z.object({
   version: z.string(),
-  config: z.record(z.unknown()).optional(),
+  config: z.record(z.string(), z.unknown()).optional(),
 });
 
 /**

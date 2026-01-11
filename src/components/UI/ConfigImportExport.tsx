@@ -3,10 +3,10 @@
  * JSON 파일로 설정 공유 기능 제공
  */
 
-import { lintConfigAtom } from '@/atoms/lintAtom';
-import type { LintConfig } from '@/types';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useRef } from 'react';
+import { lintConfigAtom } from '@/atoms/lintAtom';
+import type { LintConfig } from '@/types';
 import styles from './ConfigImportExport.module.css';
 
 /**
@@ -206,7 +206,7 @@ export function ConfigImportExport() {
         <h4 id="example-section-title" className={styles.sectionTitle}>
           JSON 형식 예시
         </h4>
-        <pre className={styles.codeBlock} aria-label="JSON 설정 형식 예시">
+        <pre className={styles.codeBlock}>
           <code>
             {JSON.stringify(
               {

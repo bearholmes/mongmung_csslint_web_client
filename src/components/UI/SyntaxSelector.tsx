@@ -2,8 +2,8 @@
  * 문법 선택 드롭다운 컴포넌트
  */
 
-import type { SyntaxOption } from '@/types';
 import { useEffect, useRef, useState } from 'react';
+import type { SyntaxOption } from '@/types';
 import styles from './SyntaxSelector.module.css';
 
 /**
@@ -89,13 +89,15 @@ export function SyntaxSelector({ value, options, label, onSelectOption }: Syntax
       >
         {label}
       </button>
-      {/* biome-ignore lint/a11y/useSemanticElements: Custom dropdown implementation */}
       <div className={styles.dropdown} role="listbox" tabIndex={0}>
         <ul className={styles.list}>
           {options.map((option) => (
             <li
               key={option.value}
               className={styles.option}
+              // biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: List item used as option
+              role="option"
+              tabIndex={0}
               aria-selected={option.value === value}
               onClick={() => handleSelectOption(option)}
               onKeyDown={(e) => {

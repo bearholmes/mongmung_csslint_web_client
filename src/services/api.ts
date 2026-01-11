@@ -2,9 +2,9 @@
  * API 클라이언트 설정
  */
 
+import { ofetch } from 'ofetch';
 import { API_BASE_URL } from '@/constants';
 import { ApiError, NetworkError } from '@/utils/error';
-import { ofetch } from 'ofetch';
 
 /**
  * API 클라이언트 인스턴스

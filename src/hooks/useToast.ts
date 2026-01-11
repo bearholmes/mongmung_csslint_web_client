@@ -2,7 +2,7 @@
  * 토스트 알림 훅
  */
 
-import toast, { type Toast, type Renderable, type ValueOrFunction } from 'react-hot-toast';
+import toast, { type Renderable, type Toast, type ValueOrFunction } from 'react-hot-toast';
 
 /**
  * 토스트 옵션

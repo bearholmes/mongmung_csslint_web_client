@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.9/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,17 +7,18 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [
-      "node_modules",
-      "dist",
-      "build",
-      "coverage",
-      "storybook-static",
-      "*.min.js",
-      "*.d.ts",
-      "tsconfig*.json",
-      "vite.config.ts",
-      "vitest.config.ts"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/coverage",
+      "!**/storybook-static",
+      "!**/*.min.js",
+      "!**/*.d.ts",
+      "!**/tsconfig*.json",
+      "!**/vite.config.ts",
+      "!**/vitest.config.ts"
     ]
   },
   "formatter": {
@@ -29,9 +30,7 @@
     "lineWidth": 100,
     "attributePosition": "auto"
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -47,10 +46,10 @@
       "complexity": {
         "noBannedTypes": "error",
         "noExtraBooleanCast": "error",
-        "noMultipleSpacesInRegularExpressionLiterals": "error",
         "noUselessCatch": "error",
         "noUselessTypeConstraint": "error",
-        "noWith": "error"
+        "noAdjacentSpacesInRegex": "error",
+        "noArguments": "error"
       },
       "correctness": {
         "noConstAssign": "error",
@@ -60,7 +59,6 @@
         "noGlobalObjectCalls": "error",
         "noInnerDeclarations": "error",
         "noInvalidConstructorSuper": "error",
-        "noNewSymbol": "error",
         "noNonoctalDecimalEscape": "error",
         "noPrecisionLoss": "error",
         "noSelfAssign": "error",
@@ -75,15 +73,15 @@
         "noUnusedPrivateClassMembers": "warn",
         "noUnusedVariables": "warn",
         "useIsNan": "error",
-        "useValidForDirection": "error"
+        "useValidForDirection": "error",
+        "noInvalidBuiltinInstantiation": "error",
+        "useValidTypeof": "error"
       },
       "security": {
         "noDangerouslySetInnerHtml": "warn",
         "noDangerouslySetInnerHtmlWithChildren": "error"
       },
       "style": {
-        "noArguments": "error",
-        "noVar": "error",
         "useConst": "error",
         "useTemplate": "warn"
       },
@@ -115,7 +113,8 @@
         "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
         "useGetterReturn": "error",
-        "useValidTypeof": "error"
+        "noWith": "error",
+        "noVar": "error"
       }
     }
   },
@@ -134,7 +133,7 @@
   },
   "overrides": [
     {
-      "include": ["*.ts", "*.tsx"],
+      "includes": ["**/*.ts", "**/*.tsx"],
       "linter": {
         "rules": {
           "correctness": {

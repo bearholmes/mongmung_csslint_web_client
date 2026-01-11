@@ -2,12 +2,12 @@
  * useLint 훅 테스트
  */
 
-import { lintService } from '@/services/lintService';
-import type { LintResult } from '@/types';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { Provider } from 'jotai';
-import { type Mock, beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, type Mock, vi } from 'vitest';
+import { lintService } from '@/services/lintService';
+import type { LintResult } from '@/types';
 import { useLint } from '../useLint';
 
 // Mock dependencies

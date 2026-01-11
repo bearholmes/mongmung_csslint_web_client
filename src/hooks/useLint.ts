@@ -2,6 +2,9 @@
  * 린트 관련 훅
  */
 
+import { useMutation } from '@tanstack/react-query';
+import { useAtom, useAtomValue, useSetAtom } from 'jotai';
+import { useResetAtom } from 'jotai/utils';
 import {
   diffCodeAtom,
   hasDiffAtom,
@@ -18,9 +21,6 @@ import {
 import { lintService } from '@/services/lintService';
 import type { Syntax } from '@/types';
 import { getErrorMessage } from '@/utils/error';
-import { useMutation } from '@tanstack/react-query';
-import { useAtom, useAtomValue, useSetAtom } from 'jotai';
-import { useResetAtom } from 'jotai/utils';
 import { useToast } from './useToast';
 
 /**

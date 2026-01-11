@@ -2,11 +2,11 @@
  * 문법 선택 훅
  */
 
+import { useAtom } from 'jotai';
+import { useMemo } from 'react';
 import { syntaxAtom } from '@/atoms/lintAtom';
 import { SYNTAX_OPTIONS } from '@/constants';
 import type { Syntax, SyntaxOption } from '@/types';
-import { useAtom } from 'jotai';
-import { useMemo } from 'react';
 
 /**
  * 문법 선택 기능을 제공하는 훅

@@ -3,11 +3,11 @@
  * 린트 설정, 상태, 프리셋 관리
  */
 
+import { atom } from 'jotai';
+import { atomWithReset } from 'jotai/utils';
 import { DEFAULT_LINT_RULES } from '@/constants';
 import type { LintConfig, LintPreset, LintStatus, OutputStyle, Syntax, Warning } from '@/types';
 import { getStorageItem, setStorageItem } from '@/utils/storage';
-import { atom } from 'jotai';
-import { atomWithReset } from 'jotai/utils';
 
 /**
  * 문법 선택 atom
